@@ -11,15 +11,14 @@ using System.Net.Http;
 using System.Runtime.Versioning;
 using System.Threading.Tasks;
 
+//Api Key: http://ram.console.aliyun.com/manage/ak
+//Api Doc: https://api.aliyun.com/api/Alidns/2015-01-09/AddDomainRecord
+//Api Server: https://api.aliyun.com/product/Alidns
 [assembly: SupportedOSPlatform("windows")]
-
 namespace PKISharp.WACS.Plugins.ValidationPlugins.Dns
 {
-    [IPlugin.Plugin<
-        ALiYunOptions, ALiYunOptionsFactory,
-        DnsValidationCapability, ALiYunJson>
-        ("1d4db2ea-ce7c-46ce-b86f-40b356fcf999",
-        "ALiYun", "Create verification records in ALiYun DNS")]
+    [IPlugin.Plugin<ALiYunOptions, ALiYunOptionsFactory, DnsValidationCapability, ALiYunJson>
+        ("1d4db2ea-ce7c-46ce-b86f-40b356fcf999", "ALiYun", "Create verification records in ALiYun DNS")]
     public class ALiYun : DnsValidation<ALiYun>, IDisposable
     {
         private ALiYunOptions _options { get; }

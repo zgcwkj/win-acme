@@ -11,15 +11,13 @@ using System.Threading.Tasks;
 using TencentCloud.Common;
 using TencentCloud.Common.Profile;
 
+//Api Key: http://console.cloud.tencent.com/cam/capi
+//Api Doc: https://cloud.tencent.com/document/api/1427/56166
 [assembly: SupportedOSPlatform("windows")]
-
 namespace PKISharp.WACS.Plugins.ValidationPlugins.Dns
 {
-    [IPlugin.Plugin<
-        TencentOptions, TencentOptionsFactory,
-        DnsValidationCapability, TencentJson>
-        ("6ea628c3-0f74-68bb-cf17-4fdd3d53f3af",
-        "Tencent", "Create verification records in Tencent DNS")]
+    [IPlugin.Plugin<TencentOptions, TencentOptionsFactory, DnsValidationCapability, TencentJson>
+        ("6ea628c3-0f74-68bb-cf17-4fdd3d53f3af", "Tencent", "Create verification records in Tencent DNS")]
     public class Tencent : DnsValidation<Tencent>, IDisposable
     {
         private TencentOptions _options { get; }
