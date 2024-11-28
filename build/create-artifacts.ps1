@@ -209,6 +209,17 @@ PluginRelease plugin.validation.dns.googledns @(
 PluginRelease plugin.validation.dns.hetzner @(
 	"PKISharp.WACS.Plugins.ValidationPlugins.Hetzner.dll"
 )
+PluginRelease plugin.validation.dns.huaweicloud @(
+	"PKISharp.WACS.Plugins.ValidationPlugins.HuaWeiCloud.dll",
+	"BouncyCastle.Cryptography.dll",
+	"HuaweiCloud.SDK.Core.dll",
+	"HuaweiCloud.SDK.Dns.dll",
+	"Microsoft.Extensions.Http.Polly.dll",
+	"Newtonsoft.Json.dll",
+	"Polly.dll",
+	"Polly.Extensions.Http.dll",
+	"YamlDotNet.dll"
+)
 PluginRelease plugin.validation.dns.infomaniak @(
 	"PKISharp.WACS.Plugins.ValidationPlugins.InfoManiak.dll",
 	"Newtonsoft.Json.dll"
